@@ -1,38 +1,137 @@
-.App {
-  text-align: center;
+* {
+	font-family: "Josefin Sans", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todoList {
+	border-radius: 10px;
+	width: 50%;
+	min-height: 50vh;
+	margin: auto;
+	text-align: left;
+	margin-top: 5%;
+	box-shadow: 5px 5px 5px 5px rgb(240, 240, 240, 0.4);
+	background-color: rgb(238, 238, 238);
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.titleDiv {
+	width: 50%;
+	margin: 0 auto 2vh auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 9vh;
+	color: white;
+	letter-spacing: 10px;
+}
+.title {
+	font-size: 5vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.todoDiv {
+	border-top: 2px solid rgb(228, 228, 228);
+	height: 10vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.todoDiv:first-child {
+	border-top: none;
+}
+.todoDiv:last-child {
+	border-bottom: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todoDivCrossed {
+	text-decoration: line-through;
+
+}
+
+.todoInput {
+	width: 50%;
+	height: 10vh;
+	border-radius: 10px;
+	margin: auto;
+	min-height: 50px;
+	background-color: rgb(238, 238, 238);
+}
+.input {
+	width: 70%;
+	border: none;
+	transition: background-color 250ms;
+	height: 5vh;
+	border-radius: 10px;
+	margin-top: calc(10px + 1vh);
+	font-size: calc(20px + 1vh);
+	min-height: 25px;
+	background-color: rgb(238, 238, 238);
+}
+
+.input:hover {
+	background-color: rgb(238, 238, 238);
+}
+
+.input:focus {
+	outline: none;
+}
+
+input[type="text"] {
+	border-radius: 10px;
+}
+
+input[type="submit"] {
+	display: none;
+}
+
+
+.appLight {
+
+}
+
+.appDark {
+	background-color: blue;
+}
+
+.appPositioning {
+	text-align: center;
+}
+
+
+.checkButton {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	margin: auto 0 auto 1vw;
+}
+.checkButton:hover {
+	background-color: lightgray;
+}
+
+.todoContent {
+	display: inline;
+	margin: auto 0 auto 0;
+	width: 50%;
+}
+
+.deleteButton {
+	display: inline;
+	margin: auto 1vw auto 0;
+	font-size: 20px;
+	background-color: white;
+	border-radius: 25%;
+	border: solid white;
+}
+
+
+.topBackground {
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	height: 50%;
+	left: 0;
+	top: 0;
+	background-image: url("../info-files/images/bg-desktop-light.jpg"); 
+	background-size: auto;
+	background-repeat: no-repeat;
 }
